@@ -181,6 +181,14 @@
     window.openProduct = openProduct;
     window.closeProduct = closeProduct;
 
+    function toggleGallery(gridId, btn) {
+        const grid = d.getElementById(gridId);
+        if (!grid) return;
+        const isExpanded = grid.classList.toggle('is-expanded');
+        btn.textContent = isExpanded ? 'Show Less' : 'View More UI Designs';
+    }
+    window.toggleGallery = toggleGallery;
+
     function initModalBindings() {
         if (!modal) return;
         modal.addEventListener('mousedown', (e) => { if (e.target === modal) closeProduct(); });

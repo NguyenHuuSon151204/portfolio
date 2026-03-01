@@ -2225,9 +2225,11 @@ footer,
 }
 
 .cinema-box video,
-.cinema-box model-viewer {
+.cinema-box model-viewer,
+.cinema-box iframe {
     width: 100%;
     height: 100%;
+    border: none;
     object-fit: cover;
 }
 
@@ -2269,6 +2271,10 @@ footer,
     gap: 24px;
 }
 
+.gallery-grid-v2:not(.is-expanded) .gallery-item:nth-child(n+7) {
+    display: none;
+}
+
 .gallery-item {
     border-radius: 16px;
     overflow: hidden;
@@ -2295,6 +2301,11 @@ footer,
 
 .gallery-item:hover img {
     transform: scale(1.05);
+}
+
+.gallery-actions {
+    margin-top: 30px;
+    text-align: center;
 }
 
 .blueprint-section {
