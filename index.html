@@ -247,14 +247,21 @@
                     <span class="award-milestone">2025 HIGHLIGHT</span>
                     <h3 class="award-title">GAME CRAFT ARENA CHAMPION</h3>
                     <p class="award-summary">Awarded 1st Prize for innovative game mechanics and exceptional user
-                        experience design.</p>
+                        experience design in a competitive environment.</p>
                     <a href="https://faise.vn/game-craft-arena-2025-khong-chi-la-mot-cuoc-thi--ma-la-be-phong-cho-nhung-nha-phat-trien-game-tre-%C4%91ay-trien-vong_23#"
                         target="_blank" class="news-link-premium">
                         <i class="fas fa-external-link-alt"></i> Read Official News
                     </a>
                 </div>
                 <div class="award-visual">
-                    <div class="main-frame"><img src="images/Reward/Reward 1.jpg" alt="Award 1" /></div>
+                    <div class="main-frame">
+                        <img src="images/Reward/Reward 1.jpg" alt="Game Craft Arena Winner" />
+                        <div class="frame-overlay"></div>
+                    </div>
+                    <div class="sub-frame">
+                        <img src="images/Reward/blogs_0b6a40d5-2e78-4482-befd-59ad4267d08d_game-arena-01.jpg"
+                            alt="Event Hall" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,15 +313,115 @@
                 <p class="muted">Explore interactive 3D environments and assets.</p>
             </header>
             <div class="art-grid-v2">
-                <div class="art-card-main" style="height:500px;">
-                    <model-viewer src="models/Dream.glb" camera-controls auto-rotate exposure="1.1"
-                        shadow-intensity="1.2" style="width:100%; height:100%;"></model-viewer>
+                <!-- 3D INTERACTIVE HERO -->
+                <div class="art-card-main">
+                    <div class="art-media-v2 model-box" id="three-container"
+                        style="height: 500px; background: radial-gradient(circle, #1a1e2e 0%, #0d0f16 100%); border-radius: 20px; border: 1px solid var(--border); position: relative; overflow: hidden;">
+                        <div id="three-loading"
+                            style="position: absolute; inset: 0; background: #0d0f16; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10;">
+                            <div class="spinner-border text-primary" role="status" style="margin-bottom:15px;"></div>
+                            <p>Initializing Three.js Engine...</p>
+                        </div>
+                        <canvas id="dream-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+                    </div>
+
+                    <script type="importmap">
+                        {
+                            "imports": {
+                                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                            }
+                        }
+                    </script>
+
+                    <script type="module">
+                        import * as THREE from 'three';
+                        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+                        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+                        const container = document.getElementById('three-container');
+                        const canvas = document.getElementById('dream-canvas');
+                        const loading = document.getElementById('three-loading');
+
+                        const scene = new THREE.Scene();
+                        const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+                        camera.position.set(5, 3, 5);
+
+                        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+                        renderer.setSize(container.clientWidth, container.clientHeight);
+                        renderer.setPixelRatio(window.devicePixelRatio);
+                        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                        renderer.toneMappingExposure = 1.2;
+                        renderer.shadowMap.enabled = true;
+
+                        const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+                        scene.add(ambientLight);
+
+                        const mainLight = new THREE.DirectionalLight(0xffffff, 2.5);
+                        mainLight.position.set(5, 10, 7.5);
+                        scene.add(mainLight);
+
+                        const fillLight = new THREE.PointLight(0x825aff, 2.0);
+                        fillLight.position.set(-5, 2, -5);
+                        scene.add(fillLight);
+
+                        const controls = new OrbitControls(camera, canvas);
+                        controls.enableDamping = true;
+                        controls.autoRotate = true;
+                        controls.autoRotateSpeed = 2.0;
+
+                        const loader = new GLTFLoader();
+                        const modelUrl = 'models/Dream.glb';
+
+                        loader.load(modelUrl, (gltf) => {
+                            const model = gltf.scene;
+                            const box = new THREE.Box3().setFromObject(model);
+                            const center = box.getCenter(new THREE.Vector3());
+                            const size = box.getSize(new THREE.Vector3());
+                            model.position.x += (model.position.x - center.x);
+                            model.position.y += (model.position.y - center.y);
+                            model.position.z += (model.position.z - center.z);
+                            const maxDim = Math.max(size.x, size.y, size.z);
+                            camera.position.z = maxDim * 1.5;
+                            camera.position.y = maxDim * 0.5;
+                            scene.add(model);
+                            loading.style.display = 'none';
+                        }, undefined, (error) => {
+                            console.error("Three.js Error:", error);
+                            loading.innerHTML = "<p style='color:red; padding: 20px; text-align:center;'>Lỗi tải mô hình! Kiểm tra file Dream.glb</p>";
+                        });
+
+                        function animate() {
+                            requestAnimationFrame(animate);
+                            controls.update();
+                            renderer.render(scene, camera);
+                        }
+                        animate();
+
+                        window.addEventListener('resize', () => {
+                            camera.aspect = container.clientWidth / container.clientHeight;
+                            camera.updateProjectionMatrix();
+                            renderer.setSize(container.clientWidth, container.clientHeight);
+                        });
+                    </script>
+                    <div class="art-info">
+                        <h3>3D Showcase: Honda Dream <span>●</span></h3>
+                        <p>Detailed recreation of the classic Dream motorcycle using Low-poly modeling and PBR Texturing
+                            techniques.</p>
+                    </div>
                 </div>
+
                 <div class="art-sub-grid">
-                    <div class="art-card-sub"><img src="images/3DProduct/toancanhmau2.png" />
+                    <div class="art-card-sub">
+                        <div class="art-media-v2">
+                            <img src="images/3DProduct/toancanhmau2.png" alt="Environment Design" loading="lazy" />
+                        </div>
                         <h4>Environment Design</h4>
                     </div>
-                    <div class="art-card-sub"><img src="images/3DProduct/Robot vang.png" />
+                    <div class="art-card-sub">
+                        <div class="art-media-v2">
+                            <img src="images/3DProduct/Robot vang.png" alt="Asset Design" loading="lazy" />
+                        </div>
                         <h4>Hard Surface Assets</h4>
                     </div>
                 </div>
