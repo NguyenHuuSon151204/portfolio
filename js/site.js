@@ -235,7 +235,7 @@
         const canvas = d.createElement('canvas');
         canvas.id = 'neonTrail';
         Object.assign(canvas.style, {
-            position: 'fixed', inset: '0', zIndex: -1, pointerEvents: 'none', mixBlendMode: 'screen'
+            position: 'fixed', inset: '0', zIndex: '-5', pointerEvents: 'none', mixBlendMode: 'screen'
         });
         d.body.appendChild(canvas);
         const ctx = canvas.getContext('2d');
@@ -364,6 +364,8 @@ function initBackgroundFX() {
     const canvas = document.createElement('canvas');
     canvas.id = 'bg-canvas';
     scene.appendChild(canvas);
+    // Explicitly set z-index to stay way back
+    scene.style.zIndex = '-10';
     document.body.prepend(scene);
 
     const ctx = canvas.getContext('2d');
