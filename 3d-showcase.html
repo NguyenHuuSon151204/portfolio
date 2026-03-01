@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Showcase · NHSSON Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script defer src="js/site.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body class="dark">
+    <section class="project-detail">
+        <div class="container container--narrow">
+            <header class="project-head">
+                <h1 class="project-title">3D Showcase: Low Poly World <span>●</span></h1>
+                <ul class="taglist">
+                    <li>3D Modeling</li>
+                    <li>Environment</li>
+                    <li>Low-poly</li>
+                </ul>
+                <p class="project-desc">A curated collection of highly optimized 3D environments and assets designed
+                    specifically for mobile game performance.</p>
+                <div class="project-meta-grid">
+                    <div><strong>Genre:</strong> 3D Environment Design</div>
+                    <div><strong>Platform:</strong> Cross-platform</div>
+                    <div><strong>Year:</strong> 2025</div>
+                    <div><strong>Role:</strong> 3D Artist</div>
+                    <div><strong>Tools:</strong> Blender</div>
+                </div>
+
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-exclamation-triangle"></i> CHALLENGE</h4>
+                        <p>Striking a balance between low poly-count optimization and aesthetic appeal, ensuring
+                            stylized visual consistency across diverse asset types.</p>
+                    </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-lightbulb"></i> SOLUTION</h4>
+                        <p>Applied Atlas Texturing and Palette-based shaders to minimize Draw Calls. Leveraged baked
+                            lighting to maintain high-quality appearance on low-end devices.</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="media-showcase-v2">
+                <div class="cinema-box 3d-box">
+                    <model-viewer src="models/Dream.glb" camera-controls auto-rotate exposure="1.1"
+                        shadow-intensity="1.2" style="width:100%; height:100%;"></model-viewer>
+                </div>
+                <div class="secondary-media">
+                    <div class="cinema-box mini-video">
+                        <video src="videos/Low Poly City 2025.mp4" controls muted loop playsinline
+                            style="width:100%; height:100%; object-fit:cover;"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blueprint-section">
+                <h2 class="section-title">Game Design Breakdown <span>●</span></h2>
+                <div class="gdd-grid">
+                    <div class="gdd-card full-width">
+                        <h3>PLAYER EXPERIENCE <i class="fas fa-heart"></i></h3>
+                        <p>Clean, vibrant environments that feel alive despite their technical simplicity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="project-footer">
+                <a href="index.html" class="btn-ghost">← Back to Portfolio</a>
+            </footer>
+        </div>
+    </section>
+</body>
+
+</html>
