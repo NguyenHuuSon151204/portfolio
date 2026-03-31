@@ -2904,4 +2904,101 @@ footer,
     .activities-photo img {
         height: 200px;
     }
-}
+}
+
+/* =========================================================
+   ✦ TIMECODE BADGE (clickable orange pill) ✦
+   ========================================================= */
+
+.timecode-badge {
+    display: inline-block;
+    background: #ff5722;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: ui-monospace, "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.15s ease, background 0.15s ease;
+    user-select: none;
+}
+
+.timecode-badge:hover {
+    transform: scale(1.1);
+    background: #ff7043;
+}
+
+/* Updated design-highlights panel */
+.design-highlights {
+    padding: 18px 20px 20px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.design-highlights .highlights-title {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+}
+
+.design-highlights ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.design-highlights li {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.design-highlights li strong {
+    color: var(--text);
+}
+
+.design-highlights li em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+/* =========================================================
+   ✦ DOWNLOAD CV BUTTON ✦
+   ========================================================= */
+
+.btn-download-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    color: #0a0c12;
+    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.3), 0 0 0 2px rgba(255, 255, 255, .05) inset;
+    transition: transform .18s ease, box-shadow .18s ease;
+    white-space: nowrap;
+}
+
+.btn-download-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(245, 158, 11, 0.45);
+}
+
