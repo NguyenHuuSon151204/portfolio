@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    GAME DESIGNER PORTFOLIO — Interactions (Vanilla ES6)
    Effects: Smooth scroll • Sticky nav • Modal (focus trap)
    Theme toggle • Reveal • Lazy • Neon progress • Parallax
@@ -188,6 +188,18 @@
         btn.textContent = isExpanded ? 'Show Less' : 'View More UI Designs';
     }
     window.toggleGallery = toggleGallery;
+
+    function toggleActivities() {
+        const extra = d.getElementById('activitiesExtra');
+        const btn = d.getElementById('activitiesToggleBtn');
+        if (!extra || !btn) return;
+        const isVisible = extra.style.display !== 'none';
+        extra.style.display = isVisible ? 'none' : 'block';
+        btn.innerHTML = isVisible
+            ? 'View All Photos <i class="fas fa-chevron-down"></i>'
+            : 'Show Less <i class="fas fa-chevron-up"></i>';
+    }
+    window.toggleActivities = toggleActivities;
 
     function initModalBindings() {
         if (!modal) return;

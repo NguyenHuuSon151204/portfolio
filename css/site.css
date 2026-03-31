@@ -2659,3 +2659,249 @@ footer,
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
 }
+
+/* =========================================================
+   ✦ PORTFOLIO — FEATURED GAME CARDS ✦
+   ========================================================= */
+
+/* Section group headings */
+.portfolio-group-title {
+    font-family: "VT323", monospace;
+    font-size: clamp(20px, 2.2vw, 28px);
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(37, 208, 255, 0.5);
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Featured card: full-width */
+.prod-card--featured {
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 28px;
+    border-radius: 16px;
+    border: 1px solid rgba(138, 92, 255, 0.4);
+    background: var(--card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.prod-card--featured:hover,
+.prod-card--featured:focus {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 0 28px rgba(138, 92, 255, 0.3), 0 0 40px rgba(37, 208, 255, 0.15);
+}
+
+/* Role tag for featured cards */
+.role-tag--featured {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: #0a0c12;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Body: iframe || info side-by-side */
+.featured-body {
+    display: flex;
+    gap: 0;
+}
+
+.featured-video {
+    flex: 0 0 60%;
+    max-width: 60%;
+    position: relative;
+}
+
+.featured-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-right: 1px solid var(--border);
+}
+
+.featured-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.featured-info .prod-meta {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Design Highlights block */
+.design-highlights {
+    padding: 14px 20px 18px;
+    flex: 1;
+}
+
+.highlights-title {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.design-highlights ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.design-highlights li {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.timecode {
+    display: inline-block;
+    background: rgba(138, 92, 255, 0.18);
+    border: 1px solid rgba(138, 92, 255, 0.4);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 1px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-family: ui-monospace, "JetBrains Mono", monospace;
+}
+
+/* Mobile: stack video and info vertically */
+@media (max-width: 767.98px) {
+    .featured-body {
+        flex-direction: column;
+    }
+
+    .featured-video {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    .featured-video iframe {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+/* =========================================================
+   ✦ ART SECTION — COLLAPSIBLE DETAILS ✦
+   ========================================================= */
+
+.art-details {
+    margin-top: 0;
+}
+
+.art-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    background: rgba(138, 92, 255, 0.08);
+    border: 1px solid rgba(138, 92, 255, 0.3);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+}
+
+.art-summary::-webkit-details-marker {
+    display: none;
+}
+
+.art-summary::marker {
+    display: none;
+}
+
+.art-summary:hover {
+    background: rgba(138, 92, 255, 0.18);
+    border-color: var(--primary);
+}
+
+.art-chevron {
+    margin-left: auto;
+    transition: transform 0.25s ease;
+    font-size: 13px;
+}
+
+.art-details[open] .art-chevron {
+    transform: rotate(180deg);
+}
+
+.art-details[open] .art-grid-v2 {
+    margin-top: 28px;
+}
+
+/* =========================================================
+   ✦ ACTIVITIES — CONDENSED PHOTOS ✦
+   ========================================================= */
+
+.activities-main-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.activities-photo img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 28px var(--shadow);
+}
+
+.activities-photo figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+}
+
+.activities-extra {
+    margin-top: 18px;
+}
+
+@media (max-width: 599.98px) {
+    .activities-main-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-photo img {
+        height: 200px;
+    }
+}
