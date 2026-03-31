@@ -3085,22 +3085,58 @@ footer,
     box-shadow: 0 10px 28px var(--shadow);
 }
 
-/* 2/2/1/1 Layout Logic */
-.activities-gallery-grid figure:nth-child(n+5) {
-    grid-column: 1 / -1; /* Spans full width for 5th item and beyond */
+/* Row Pattern: 2, 2, 2, and then specialized last row for portrait */
+.activities-gallery-grid figure:nth-child(n+7) {
+    grid-column: 1 / -1; /* Full width row starting from item 7 */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
 }
 
 .activities-gallery-grid img {
     width: 100%;
-    height: 240px; /* Standard height for landscape */
+    height: 240px; 
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
 
-/* Specific height for the portrait Git photo (last item) */
-.activities-gallery-grid figure:last-child img {
-    height: 400px; /* More height for the portrait image at the bottom */
+.activities-extra-item {
+    display: none;
+}
+
+.activities-gallery-grid.is-expanded .activities-extra-item {
+    display: block;
+}
+
+/* Portrait specific styling for the final item when expanded */
+.activities-gallery-grid.is-expanded .portrait-extra {
+    display: flex !important; /* Ensure it stays flex when expanded */
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / -1;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 20px;
+}
+
+.activities-gallery-grid .portrait-extra img {
+    width: auto;
+    max-width: 100%;
+    height: 550px; /* Tall for portrait */
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+.activities-gallery-grid .portrait-extra figcaption {
+    background: transparent;
+    margin-top: 12px;
+    padding: 0;
 }
 
 .activities-gallery-grid img:hover {

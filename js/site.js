@@ -202,16 +202,13 @@
     window.toggleActivities = toggleActivities;
 
     function toggleActivitiesV2() {
-        const items = d.querySelectorAll('.activities-extra-item');
+        const grid = d.getElementById('activitiesGrid');
         const btn = d.getElementById('activitiesToggleBtn');
-        if (!items.length || !btn) return;
+        if (!grid || !btn) return;
         
-        const isHidden = items[0].style.display === 'none';
-        items.forEach(item => {
-            item.style.display = isHidden ? 'block' : 'none';
-        });
+        const isExpanded = grid.classList.toggle('is-expanded');
         
-        btn.innerHTML = isHidden
+        btn.innerHTML = isExpanded
             ? 'Show Less <i class="fas fa-chevron-up"></i>'
             : 'View All Photos <i class="fas fa-chevron-down"></i>';
     }
