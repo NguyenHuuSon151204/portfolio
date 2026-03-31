@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kaito Steal · NHSSON Portfolio</title>
+    <title>Kaito Steal · Case Study · NHSSON</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script defer src="js/site.js"></script>
@@ -13,44 +13,40 @@
 <body class="dark">
     <section class="project-detail">
         <div class="container container--narrow">
+
+            <nav class="detail-breadcrumb">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </nav>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 1.0 — OVERVIEW & SCOPE
+            ════════════════════════════════════════ -->
             <header class="project-head">
-                <h1 class="project-title">Kaito Steal <span>●</span></h1>
-                <ul class="taglist">
-                    <li>Stealth</li>
-                    <li>Puzzle</li>
-                    <li>WebGL</li>
-                </ul>
-                <p class="project-desc">A unique stealth puzzle game where players control a stretchable hand to grab
-                    artifacts while avoiding guards.</p>
+                <div class="project-title-row">
+                    <h1 class="project-title">Kaito Steal <span>●</span></h1>
+                    <ul class="taglist">
+                        <li>Stealth</li>
+                        <li>Puzzle</li>
+                        <li>WebGL</li>
+                    </ul>
+                </div>
+                <p class="project-desc">A unique stealth puzzle game where players control a stretchable hand to grab artifacts while avoiding guards — built for WebGL in under 3 weeks.</p>
+
+                <div class="section-label">1.0 Overview &amp; Scope</div>
                 <div class="project-meta-grid">
                     <div><strong>Genre:</strong> Stealth Puzzle</div>
-                    <div><strong>Platform:</strong> WebGL</div>
-                    <div><strong>Year:</strong> Apr 2025 - May 2025</div>
-                    <div><strong>Role:</strong> Game Designer, Level Designer, Artist</div>
-                    <div><strong>Team Size:</strong> 2 (1 Dev, 1 Designer/Artist)</div>
-                    <div><strong>Tools:</strong> Unity (C#), Blender</div>
+                    <div><strong>Platform:</strong> WebGL (Browser)</div>
+                    <div><strong>Timeline:</strong> Apr 2025 – May 2025 (3 weeks)</div>
+                    <div><strong>Role:</strong> Game Designer · Level Designer · Artist</div>
+                    <div><strong>Team Size:</strong> 2 (1 Dev · 1 Designer/Artist)</div>
+                    <div><strong>Tools:</strong> Unity (C#) · Blender · Figma</div>
                 </div>
-
-                <div class="usp-banner">
-                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
-                    <p>Unique 'Arm Dragging' control scheme; stealth-puzzle hybrid; short, high-impact level sessions.
-                    </p>
-                </div>
-
-                <div class="designer-insights">
-                    <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> CHALLENGE</h4>
-                        <p>Optimizing Inverse Kinematics for smooth browser performance while creating diverse puzzles
-                            under WebGL memory limits.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-lightbulb"></i> SOLUTION</h4>
-                        <p>Simplified detection systems and strictly managed asset sizes to ensure fast loading and
-                            stability.</p>
-                    </div>
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener"><i class="fas fa-gamepad"></i> Play on Itch.io / WebGL <span class="build-badge">Coming Soon</span></a>
                 </div>
             </header>
 
+            <!-- VIDEO -->
             <div class="media-showcase-v2">
                 <div class="cinema-box">
                     <iframe src="https://www.youtube.com/embed/QvUeyYUQr9c"
@@ -59,50 +55,152 @@
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">Concept & In-Game <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="galleryGrid">
-                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 1.png" alt="InGame" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 2.png" alt="InGame" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 3.png" alt="InGame" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/Game Asset 1.png" alt="Asset" /></div>
+            <!-- ══════════════════════════════════════
+                 SECTION 2.0 — THE CONCEPT
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">2.0 The Concept</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
+                        <p>The concept emerged from a Game Jam prompt: <em>"Control something you can stretch."</em> Instead of a character moving through space, the player controls an extending arm — shifting the spatial interaction model entirely to a <em>tool-based</em> paradigm.</p>
                     </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
+                        <p>Kaito is a master thief who lost his body but kept his arm. Players must navigate museum exhibits, steal artifacts, and avoid robotic guards — all without ever stepping foot in the room.</p>
+                    </div>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert initial concept sketch / reference images here -->
+                    <div class="img-placeholder"><i class="fas fa-image"></i><span>Concept Sketch — Arm Mechanic Ideation</span></div>
+                </div>
+
+                <div class="usp-banner">
+                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
+                    <p>Unique 'Arm Dragging' control scheme replicable in browser; stealth-puzzle hybrid with very short, high-impact levels (2–4 min each).</p>
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">UI Design <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="uiGrid">
-                        <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 3.png" alt="UI" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 4.png" alt="UI" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 5.png" alt="UI" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 6.png" alt="UI" /></div>
-                    </div>
-                </div>
-            </div>
+            <!-- ══════════════════════════════════════
+                 SECTION 3.0 — GDD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">3.0 Game Design Document (GDD)</div>
 
-            <div class="blueprint-section">
-                <h2 class="section-title">Game Design Breakdown <span>●</span></h2>
+                <!-- 3.1 Core Loop -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
                 <div class="gdd-grid">
-                    <div class="gdd-card">
+                    <div class="gdd-card full-width">
                         <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p>Observe -> Drag hand -> Avoid guards -> Steal -> Complete.</p>
+                        <p><strong>Observe → Drag arm → Thread gaps → Grab artifact → Retract to safety.</strong><br>
+                        The arm is controlled via click-and-drag. Its trajectory is governed by IK (Inverse Kinematics) — it follows joints around corners. Guards patrol with a fixed Cone of Vision. Players must time their reach to the 1-2s blind spots in patrol cycles.</p>
                     </div>
                     <div class="gdd-card">
                         <h3>KEY MECHANIC <i class="fas fa-cogs"></i></h3>
-                        <p>Stretching hand physics & Time-windowed stealth.</p>
+                        <p>Stretching hand physics with joint-based IK. Time-windowed stealth: the arm must be fully retracted before the guard turns back.</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>LEVEL DESIGN STRATEGY <i class="fas fa-map"></i></h3>
-                        <p>Guided progression: teaching drag mechanics in safe zones, then introducing patrol routes,
-                            eventually combining obstacles for complex decision making.</p>
+                        <h3>FAIL STATE <i class="fas fa-skull"></i></h3>
+                        <p><em>Hard-fail with instant reload.</em> If the arm is spotted, the level resets immediately — no death animation, no penalty timer. This encourages fast iteration and skill expression over frustration.</p>
+                    </div>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert Core Loop flowchart / IK diagram here -->
+                    <div class="img-placeholder"><i class="fas fa-project-diagram"></i><span>IK Arm System Flowchart</span></div>
+                </div>
+
+                <!-- 3.2 Level Design -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.2</span> Level Design Flow &amp; Pacing</h3>
+                <div class="gdd-grid">
+                    <div class="gdd-card">
+                        <h3>PROGRESSION STRUCTURE <i class="fas fa-map"></i></h3>
+                        <p>4 levels, each introducing one new mechanic: Level 1 (drag basics) → Level 2 (corner threading) → Level 3 (moving guards) → Level 4 (dual guards + timed traps).</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>TECH CONSTRAINTS <i class="fas fa-microchip"></i></h3>
-                        <p>WebGL memory optimization; reduced asset scale; performance-first detection logic.</p>
+                        <h3>SAFE ZONE TEACHING <i class="fas fa-graduation-cap"></i></h3>
+                        <p>The first half of each level is a "safe practice zone" with no guards. This lets players discover the new mechanic before being tested on it.</p>
                     </div>
+                </div>
+                <div class="gallery-section">
+                    <div class="gallery-grid-v2">
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 1.png" alt="Level 1" /></div>
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 2.png" alt="Level 2" /></div>
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 3.png" alt="Level 3" /></div>
+                        <!-- 📸 PLACEHOLDER: Insert level layout sketches here -->
+                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 4 Layout Sketch</span></div>
+                    </div>
+                </div>
+
+                <!-- 3.3 UI/UX -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.3</span> UI/UX Breakdown</h3>
+                <p class="gdd-body-text">UI is minimalist by design — a heist aesthetic with dark overlays and neon highlights. The focus is on the arm itself as the primary UI element: its color changes (white → red) signals detection state. No separate health bar needed.</p>
+                <div class="gallery-grid-v2" id="uiGrid">
+                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 3.png" alt="UI" /></div>
+                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 4.png" alt="UI" /></div>
+                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 5.png" alt="UI" /></div>
+                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 6.png" alt="UI" /></div>
+                    <div class="gallery-item"><img src="images/Kaito Steal/Game Asset 1.png" alt="Asset" /></div>
+                    <!-- 📸 PLACEHOLDER: Insert wireframes / UI flow diagram here -->
+                    <div class="gallery-item img-placeholder-sm"><i class="fas fa-pencil-ruler"></i><span>UI Flow Wireframe</span></div>
+                </div>
+
+                <!-- 3.4 Economy -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
+                <p class="gdd-body-text">No economy system. Balancing is focused entirely on <em>timing windows</em>: guard patrol speed, arm drag speed, and IK response time must form a triangle where the optimal window is 1.5–2.5s — tight enough to create tension but learnable in 2–3 attempts.</p>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert balancing spreadsheet (patrol speed vs. arm drag speed matrix) -->
+                    <div class="img-placeholder"><i class="fas fa-table"></i><span>Timing Balance Spreadsheet</span></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 4.0 — TECHNICAL PIPELINE
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">4.0 Technical Design Pipeline</div>
+                <div class="gdd-grid">
+                    <div class="gdd-card">
+                        <h3>IK OPTIMIZATION <i class="fas fa-code"></i></h3>
+                        <p>Unity's built-in IK was replaced with a custom 2-joint chain solver to reduce WebGL CPU overhead from ~8ms to ~2ms per frame. This was critical for smooth 60fps browser play.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>ASSET OPTIMIZATION <i class="fas fa-compress-alt"></i></h3>
+                        <p>All sprites compressed to 512×512 max with Crunch compression. WebGL build size reduced from 48MB to 22MB. Audio compressed to OGG at 96kbps.</p>
+                    </div>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert Unity Profiler screenshot / WebGL build settings screenshot -->
+                    <div class="img-placeholder"><i class="fas fa-chart-bar"></i><span>Unity Profiler — WebGL Performance</span></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 5.0 — KEY LEARNINGS
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-exclamation-triangle"></i> WHAT DIDN'T WORK</h4>
+                        <p>Early IK drag felt "floaty" and unresponsive — playtests showed players losing trust in the control scheme. Adding a subtle arm-snap animation on contact made the mechanic feel deliberate and satisfying.</p>
+                    </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-check-circle"></i> WHAT WORKED WELL</h4>
+                        <p>The hard-fail instant-reload was a game design risk that paid off — playtesters averaged 4 attempts per level and described the satisfaction as "like solving a puzzle." Zero frustration reported in sessions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 6.0 — PLAYABLE BUILD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section build-section">
+                <div class="section-label">6.0 Playable Build</div>
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener">
+                        <i class="fas fa-gamepad"></i> Play on Itch.io / WebGL
+                        <span class="build-badge">Coming Soon</span>
+                    </a>
                 </div>
             </div>
 

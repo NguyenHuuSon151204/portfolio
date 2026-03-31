@@ -3001,4 +3001,256 @@ footer,
     transform: translateY(-2px);
     box-shadow: 0 14px 30px rgba(245, 158, 11, 0.45);
 }
+
+/* =========================================================
+   ✦ FIX: No purple sweep bar on featured cards ✦
+   ========================================================= */
+
+/* The ::before sweep animation must NOT run on featured cards */
+.prod-card--featured::before {
+    display: none !important;
+}
+
+/* Featured card info column must not clip content */
+.featured-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    min-width: 0;
+}
+
+/* =========================================================
+   ✦ CTA BUTTONS — Case Study / GDD ✦
+   ========================================================= */
+
+/* Full-width CTA for featured cards */
+.featured-cta {
+    padding: 10px 12px 14px;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.btn-case-study {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 11px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: #0a0c12;
+    box-shadow: 0 8px 20px rgba(138, 92, 255, 0.3);
+    transition: transform .18s ease, box-shadow .18s ease;
+    text-align: center;
+}
+
+.btn-case-study:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(138, 92, 255, 0.45);
+}
+
+/* Compact version for prototype cards */
+.btn-case-study--sm {
+    display: block;
+    width: calc(100% - 4px);
+    margin: 10px 0 4px;
+    padding: 9px 14px;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(138, 92, 255, 0.25);
+}
+
+/* =========================================================
+   ✦ ACTIVITIES GALLERY — Uniform aspect-ratio grid ✦
+   ========================================================= */
+
+.activities-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.activities-gallery-grid figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 28px var(--shadow);
+}
+
+.activities-gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.activities-gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+.activities-gallery-grid figcaption {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #aaa;
+    background: rgba(0,0,0,0.3);
+}
+
+/* =========================================================
+   ✦ INNER PROJECT PAGES — GDD TEMPLATE STYLES ✦
+   ========================================================= */
+
+/* Breadcrumb back nav */
+.detail-breadcrumb {
+    margin-bottom: 28px;
+}
+.detail-breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.detail-breadcrumb a:hover { color: var(--accent); }
+
+/* Section numbered labels */
+.section-label {
+    display: inline-block;
+    font-family: "VT323", monospace;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    background: rgba(37, 208, 255, 0.08);
+    border: 1px solid rgba(37, 208, 255, 0.25);
+    border-radius: 6px;
+    padding: 3px 12px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+/* GDD section wrapper */
+.gdd-section {
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+/* GDD sub-headings (3.1, 3.2 …) */
+.gdd-sub-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 32px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sub-num {
+    font-family: "VT323", monospace;
+    color: var(--primary);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Body text inside GDD */
+.gdd-body-text {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+}
+
+/* Placeholder block for missing images */
+.placeholder-block {
+    margin: 16px 0 24px;
+}
+.img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 180px;
+    border: 2px dashed rgba(138, 92, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(138, 92, 255, 0.04);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+}
+.img-placeholder i { font-size: 28px; color: var(--primary); opacity: 0.5; }
+
+/* Small placeholder (inside gallery grid) */
+.img-placeholder-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 160px;
+    border: 2px dashed rgba(138, 92, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(138, 92, 255, 0.04);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    padding: 12px;
+}
+.img-placeholder-sm i { font-size: 22px; color: var(--primary); opacity: 0.45; }
+
+/* Project title row with taglist inline */
+.project-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+/* Build CTA section */
+.build-section {
+    text-align: center;
+}
+.build-cta-row {
+    margin: 20px 0 8px;
+    display: flex;
+    justify-content: center;
+}
+.btn-build {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    color: #fff;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.35);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-build:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(34, 197, 94, 0.5);
+}
+.build-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    letter-spacing: 0.5px;
+}
+
 

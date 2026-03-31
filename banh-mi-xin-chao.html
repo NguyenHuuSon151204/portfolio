@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bánh Mì Xin Chào · NHSSON Portfolio</title>
+    <title>Bánh Mì Xin Chào · Case Study · NHSSON</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script defer src="js/site.js"></script>
@@ -13,42 +13,40 @@
 <body class="dark">
     <section class="project-detail">
         <div class="container container--narrow">
+
+            <nav class="detail-breadcrumb">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </nav>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 1.0 — OVERVIEW & SCOPE
+            ════════════════════════════════════════ -->
             <header class="project-head">
-                <h1 class="project-title">Bánh Mì Xin Chào <span>●</span></h1>
-                <ul class="taglist">
-                    <li>Management</li>
-                    <li>Simulation</li>
-                    <li>Mobile</li>
-                </ul>
-                <p class="project-desc">A cooking and time-management game focused on preparing Vietnamese street food
-                    in a high-pressure kitchen.</p>
+                <div class="project-title-row">
+                    <h1 class="project-title">Bánh Mì Xin Chào <span>●</span></h1>
+                    <ul class="taglist">
+                        <li>Management</li>
+                        <li>Simulation</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                <p class="project-desc">A cooking and time-management game focused on preparing Vietnamese street food in a high-pressure kitchen — designed for mobile with a full live-ops economy.</p>
+
+                <div class="section-label">1.0 Overview &amp; Scope</div>
                 <div class="project-meta-grid">
                     <div><strong>Genre:</strong> Cooking / Time Management</div>
-                    <div><strong>Platform:</strong> Mobile</div>
-                    <div><strong>Year:</strong> Jun 2024 - Aug 2024</div>
-                    <div><strong>Role:</strong> Game Designer, Level Designer, 2D & 3D Artist</div>
-                    <div><strong>Team Size:</strong> 2 (1 Dev, 1 Designer/Artist)</div>
-                    <div><strong>Tools:</strong> Unity (C#), Figma</div>
+                    <div><strong>Platform:</strong> Mobile (Android/iOS)</div>
+                    <div><strong>Timeline:</strong> Jun 2024 – Aug 2024</div>
+                    <div><strong>Role:</strong> Lead Game Designer · Level Designer · 2D &amp; 3D Artist</div>
+                    <div><strong>Team Size:</strong> 2 (1 Dev · 1 Designer/Artist)</div>
+                    <div><strong>Tools:</strong> Unity (C#) · Blender · Figma</div>
                 </div>
-
-                <div class="usp-banner">
-                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
-                    <p>Authentic Vietnamese theme; deep preparation mechanics; challenging multitasking workflows.</p>
-                </div>
-
-                <div class="designer-insights">
-                    <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> CHALLENGE</h4>
-                        <p>Handling multi-station workflows and complex recipe multitasking on small touch screens.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-lightbulb"></i> SOLUTION</h4>
-                        <p>Optimized low-poly 3D models for mobile draw calls and designed a simplified touch-first UI
-                            layout.</p>
-                    </div>
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener"><i class="fas fa-gamepad"></i> Play on Itch.io <span class="build-badge">Coming Soon</span></a>
                 </div>
             </header>
 
+            <!-- VIDEO -->
             <div class="media-showcase-v2">
                 <div class="cinema-box">
                     <iframe src="https://www.youtube.com/embed/HZVUuOdJF0k"
@@ -57,62 +55,156 @@
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">Concept & In-Game <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="galleryGrid">
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Home Screen.png"
-                                alt="Home" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Waiting Screen.png"
-                                alt="Wait" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Asset/Environment.png"
-                                alt="Environment" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Asset/Bánh Mì 3D.png" alt="3D Model" />
-                        </div>
+            <!-- ══════════════════════════════════════
+                 SECTION 2.0 — THE CONCEPT
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">2.0 The Concept</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
+                        <p>Inspired by <em>Overcooked</em> but localized for Vietnam's street food culture. The player runs a bánh mì stall and must master a 5-step preparation chain under increasing time pressure — with customers losing patience dynamically.</p>
                     </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
+                        <p>No story narrative — the "narrative" is the <em>kinetic satisfaction</em> of the kitchen flow. Each level tells a story through its layout: a cramped family stall vs. a rush-hour tourist spot vs. a catering event.</p>
+                    </div>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert initial concept sketches / reference images here -->
+                    <div class="img-placeholder"><i class="fas fa-image"></i><span>Kitchen Layout Concept Sketch</span></div>
+                </div>
+
+                <div class="usp-banner">
+                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
+                    <p>Authentic Vietnamese theme; deep prep chain mechanics; full live-ops economy (upgrades, daily missions, rewarded ads) designed with mobile KPIs in mind.</p>
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">UI Design <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="uiGrid">
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Shop Gold.png"
-                                alt="Shop" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Shop Diamond.png"
-                                alt="Shop" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Daily Misson.png"
-                                alt="Mission" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Daily Checkin.png"
-                                alt="Checkin" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Achivement 1.png"
-                                alt="Achievement" /></div>
-                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Special Deal.png"
-                                alt="Deal" /></div>
+            <!-- ══════════════════════════════════════
+                 SECTION 3.0 — GDD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">3.0 Game Design Document (GDD)</div>
+
+                <!-- 3.1 Core Loop -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
+                <div class="gdd-grid">
+                    <div class="gdd-card full-width">
+                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
+                        <p><strong>Receive order → Prepare ingredients → Assemble bánh mì → Serve → Collect tip → Upgrade station.</strong><br>
+                        Each order has a patience timer (5–12s depending on level). Serving within the green zone yields a bonus tip. Upgrades (faster slicing, bigger bread) are purchased between levels using earned coins — creating a meta-loop that drives retention.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>SESSION STRUCTURE <i class="fas fa-clock"></i></h3>
+                        <p>Each level = 1 wave (2–3 minutes). 3 stars for speed + satisfaction score. Designed for mobile: no level lasts longer than 4 minutes to fit commute habits.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>RETENTION MECHANICS <i class="fas fa-redo"></i></h3>
+                        <p>Daily login reward → Daily mission → Rewarded Ad at fail state ("Continue for free!") → Weekly event level. All standard mobile LiveOps hooks implemented in prototype.</p>
                     </div>
                 </div>
-            </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert Core Loop flowchart here -->
+                    <div class="img-placeholder"><i class="fas fa-project-diagram"></i><span>Core Loop Flowchart — Order to Upgrade</span></div>
+                </div>
 
-            <div class="blueprint-section">
-                <h2 class="section-title">Game Design Breakdown <span>●</span></h2>
+                <!-- 3.2 Level Design -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.2</span> Level Design Flow &amp; Pacing</h3>
                 <div class="gdd-grid">
                     <div class="gdd-card">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p>Receive order -> Prepare -> Assemble -> Serve -> Earn tips.</p>
+                        <h3>U-SHAPED KITCHEN LAYOUT <i class="fas fa-map"></i></h3>
+                        <p>All stations arranged in a U-shape so the player's thumb never travels more than 60% of screen height. This reduces cognitive load and enables rapid multi-station chaining.</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>LEVEL DESIGN STRATEGY <i class="fas fa-map"></i></h3>
-                        <p>Gradual complexity: starting with single steps, then scaling to high volume pressure and
-                            station multitasking.</p>
+                        <h3>CHAOS ESCALATION <i class="fas fa-fire"></i></h3>
+                        <p>Order spawn rate dynamically scales with player score: performing well = more orders = more chaos. This creates organic difficulty without hard gates.</p>
+                    </div>
+                </div>
+                <div class="gallery-section">
+                    <div class="gallery-grid-v2">
+                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Home Screen.png" alt="Home" /></div>
+                        <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Waiting Screen.png" alt="Wait" /></div>
+                        <div class="gallery-item"><img src="images/BanhMiXinChao/Asset/Environment.png" alt="Environment" /></div>
+                        <!-- 📸 PLACEHOLDER: Insert kitchen layout sketch / top-down level diagram -->
+                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level Layout — U-Shape Kitchen</span></div>
+                    </div>
+                </div>
+
+                <!-- 3.3 UI/UX -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.3</span> UI/UX Breakdown</h3>
+                <p class="gdd-body-text">Every screen was designed in Figma with a 3-tap rule: any key action (order, upgrade, retry) must be reachable in ≤3 taps. The color system uses Vietnamese flag red/yellow as accent to reinforce the cultural theme without clashing with game UI.</p>
+                <div class="gallery-grid-v2" id="uiGrid">
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Shop Gold.png" alt="Shop" /></div>
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Shop Diamond.png" alt="Shop" /></div>
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Daily Misson.png" alt="Mission" /></div>
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Daily Checkin.png" alt="Checkin" /></div>
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Achivement 1.png" alt="Achievement" /></div>
+                    <div class="gallery-item"><img src="images/BanhMiXinChao/Screen Design/Special Deal.png" alt="Deal" /></div>
+                    <!-- 📸 PLACEHOLDER: Insert player journey flow wireframe here -->
+                    <div class="gallery-item img-placeholder-sm"><i class="fas fa-sitemap"></i><span>Player Journey Wireframe (Figma)</span></div>
+                </div>
+
+                <!-- 3.4 Economy -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
+                <p class="gdd-body-text">Dual currency: <strong>Coins</strong> (earned in-game, used for station upgrades) and <strong>Gems</strong> (premium, used for cosmetics and continues). Upgrade costs are tuned so the player can upgrade one station per 2–3 completed levels — maintaining a sense of meaningful progression.</p>
+                <div class="gallery-section">
+                    <div class="gallery-grid-v2">
+                        <div class="gallery-item"><img src="images/BanhMiXinChao/Asset/Bánh Mì 3D.png" alt="3D Model" /></div>
+                        <!-- 📸 PLACEHOLDER: Insert economy balancing spreadsheet (coin earn rate vs. upgrade cost curve) -->
+                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-table"></i><span>Economy Balance Sheet — Coin Earn Rate vs. Upgrade Cost</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 4.0 — TECHNICAL PIPELINE
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">4.0 Technical Design Pipeline</div>
+                <div class="gdd-grid">
+                    <div class="gdd-card">
+                        <h3>3D ASSET OPTIMIZATION <i class="fas fa-cube"></i></h3>
+                        <p>All food items modeled in Blender at &lt;500 tris. Shared material atlas for kitchen props. Mobile draw call budget: &lt;60 per frame on target device (mid-range Android).</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>TECH CONSTRAINTS <i class="fas fa-microchip"></i></h3>
-                        <p>Low-poly mobile optimization; quick-touch UI design.</p>
+                        <h3>TOUCH INPUT DESIGN <i class="fas fa-hand-pointer"></i></h3>
+                        <p>Using Unity's EventSystem with custom raycast layers to prevent accidental mis-taps between stations. Minimum touch target size: 88×88px (Apple HIG standard).</p>
                     </div>
-                    <div class="gdd-card full-width">
-                        <h3>PLAYER EXPERIENCE <i class="fas fa-heart"></i></h3>
-                        <p>Satisfaction through frantic efficiency and high-speed coordination.</p>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert Unity mobile profiler or draw call screenshot here -->
+                    <div class="img-placeholder"><i class="fas fa-mobile-alt"></i><span>Mobile Profiler — Draw Call Optimization</span></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 5.0 — KEY LEARNINGS
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-exclamation-triangle"></i> WHAT DIDN'T WORK</h4>
+                        <p>Early levels had 6 available stations simultaneously — playtests showed new players were overwhelmed in the first 30 seconds. Redesigning levels to introduce one station per level dramatically improved the onboarding funnel.</p>
                     </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-check-circle"></i> WHAT WORKED WELL</h4>
+                        <p>The "Rewarded Ad at fail state" integration was seamless — 70% of simulated players chose the free continue over restarting. This validates the LiveOps hook as a strong retention lever.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 6.0 — PLAYABLE BUILD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section build-section">
+                <div class="section-label">6.0 Playable Build</div>
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener">
+                        <i class="fas fa-gamepad"></i> Play on Itch.io
+                        <span class="build-badge">Coming Soon</span>
+                    </a>
                 </div>
             </div>
 

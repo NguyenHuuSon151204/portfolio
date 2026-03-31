@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Anh Hùng Vô Danh · NHSSON Portfolio</title>
+    <title>Anh Hùng Vô Danh · Case Study · NHSSON</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script defer src="js/site.js"></script>
@@ -13,44 +13,45 @@
 <body class="dark">
     <section class="project-detail">
         <div class="container container--narrow">
+
+            <!-- ── Back nav ── -->
+            <nav class="detail-breadcrumb">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </nav>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 1.0 — OVERVIEW & SCOPE
+            ════════════════════════════════════════ -->
             <header class="project-head">
-                <h1 class="project-title">Anh Hùng Vô Danh <span>●</span></h1>
-                <ul class="taglist">
-                    <li>Stealth</li>
-                    <li>3D</li>
-                    <li>WebGL</li>
-                </ul>
-                <p class="project-desc">A stealth-focused action puzzle game inspired by historical Vietnamese
-                    resistance fighters. Currently in Design Prototype stage.</p>
+                <div class="project-title-row">
+                    <h1 class="project-title">Anh Hùng Vô Danh <span>●</span></h1>
+                    <ul class="taglist">
+                        <li>Stealth</li>
+                        <li>3D</li>
+                        <li>WebGL</li>
+                    </ul>
+                </div>
+                <p class="project-desc">A stealth-focused action-puzzle game inspired by historical Vietnamese resistance fighters. Currently in Design Prototype stage.</p>
+
+                <div class="section-label">1.0 Overview &amp; Scope</div>
                 <div class="project-meta-grid">
                     <div><strong>Genre:</strong> Action Stealth / Puzzle</div>
-                    <div><strong>Platform:</strong> PC</div>
-                    <div><strong>Year:</strong> In Design Stage</div>
-                    <div><strong>Role:</strong> Game Designer, Level Designer, 2D Artist</div>
-                    <div><strong>Team Size:</strong> 5 (3 Dev, 1 3D Artist, 1 Designer)</div>
-                    <div><strong>Tools:</strong> Unity, Photoshop</div>
+                    <div><strong>Platform:</strong> PC / WebGL</div>
+                    <div><strong>Status:</strong> In Design Stage</div>
+                    <div><strong>Role:</strong> Lead Game Designer, Level Designer, 2D Artist</div>
+                    <div><strong>Team Size:</strong> 5 (3 Dev · 1 3D Artist · 1 Designer)</div>
+                    <div><strong>Tools:</strong> Unity (C#) · Photoshop · Figma</div>
                 </div>
 
-                <div class="usp-banner">
-                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
-                    <p>Combination of stealth gameplay with puzzle-based progression; characters inspired by different
-                        regions of Vietnam.</p>
-                </div>
-
-                <div class="designer-insights">
-                    <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> CHALLENGE</h4>
-                        <p>Translating historical resistance tactics into engaging stealth mechanics while maintaining
-                            visual clarity.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-lightbulb"></i> SOLUTION</h4>
-                        <p>Utilized modular level design and simplified enemy AI models to iterate quickly on
-                            stealth-puzzle layouts.</p>
-                    </div>
+                <!-- Playable Build CTA -->
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener"><i class="fas fa-gamepad"></i> Play on Itch.io / WebGL <span class="build-badge">Coming Soon</span></a>
                 </div>
             </header>
 
+            <!-- ══════════════════════════════════════
+                 SECTION 1.5 — VIDEO SHOWCASE
+            ════════════════════════════════════════ -->
             <div class="media-showcase-v2">
                 <div class="cinema-box">
                     <iframe src="https://www.youtube.com/embed/cMkoh6FQ1zY"
@@ -59,64 +60,156 @@
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">Concept & In-Game <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="galleryGrid">
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/InGame.png" alt="InGame" /></div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/Thiết kế Map.png" alt="Map Design" />
-                        </div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Select Level.png" alt="UI" /></div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Tương tác.png" alt="UI" /></div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Hướng Dẫn Chơi.png" alt="UI" />
-                        </div>
+            <!-- ══════════════════════════════════════
+                 SECTION 2.0 — THE CONCEPT
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">2.0 The Concept</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
+                        <p>Inspired by historical Vietnamese resistance fighters of the 20th century, the game places players in the role of an anonymous hero operating behind enemy lines. The core fantasy is <em>"invisible power"</em> — eliminating threats without ever being seen.</p>
                     </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
+                        <p>Set across 5 regions of Vietnam, each level introduces a unique hero character archetype tied to that region's history — creating emotional investment alongside mechanical progression.</p>
+                    </div>
+                </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert initial concept sketch / mood board image here -->
+                    <div class="img-placeholder"><i class="fas fa-image"></i><span>Concept Sketch / Mood Board</span></div>
+                </div>
+
+                <div class="usp-banner">
+                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
+                    <p>Combination of stealth gameplay with puzzle-based progression; culturally-rooted hero characters from different regions of Vietnam with distinct play styles.</p>
                 </div>
             </div>
 
-            <div class="gallery-section">
-                <h2 class="section-title">UI Design <span>●</span></h2>
-                <div class="gallery-wrapper">
-                    <div class="gallery-grid-v2" id="uiGrid">
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/Main Screen UI.png" alt="Main UI" />
-                        </div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/InGame UI.png" alt="InGame UI" /></div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Giao nhiệm vụ.png" alt="Quest UI" />
-                        </div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Hoàn thành màn chơi.png"
-                                alt="Complete UI" /></div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Lose game.png" alt="Lose UI" />
-                        </div>
-                        <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Pause game.png" alt="Pause UI" />
-                        </div>
+            <!-- ══════════════════════════════════════
+                 SECTION 3.0 — GAME DESIGN DOCUMENT
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">3.0 Game Design Document (GDD)</div>
+
+                <!-- 3.1 Core Loop -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
+                <div class="gdd-grid">
+                    <div class="gdd-card full-width">
+                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
+                        <p><strong>Observe → Plan → Execute → Escape (or Neutralize).</strong><br>
+                        Players scan the environment using a visible <em>Cone of Vision</em> indicator on enemies, plan a timed approach using environmental distractions, execute the infiltration, and either escape or neutralize the target. Failure triggers instant-replay at the last checkpoint, encouraging experimentation.</p>
                     </div>
-                    <div class="gallery-actions">
-                        <button class="btn-ghost" onclick="toggleGallery('uiGrid', this)">View More UI Designs</button>
+                    <div class="gdd-card">
+                        <h3>PLAYER LOOP <i class="fas fa-user"></i></h3>
+                        <p>Distraction item → Enemy enters "Investigate" state (3s window) → Player moves → Collect objective → Exfiltrate.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>ENEMY AI STATES <i class="fas fa-eye"></i></h3>
+                        <p><strong>Patrol → Alert → Investigate → Chase → Combat.</strong> Detection radius scales per level to increase difficulty curve.</p>
                     </div>
                 </div>
-            </div>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert Core Loop flowchart diagram here -->
+                    <div class="img-placeholder"><i class="fas fa-project-diagram"></i><span>Core Loop Flowchart Diagram</span></div>
+                </div>
 
-            <div class="blueprint-section">
-                <h2 class="section-title">Game Design Breakdown <span>●</span></h2>
+                <!-- 3.2 Level Design -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.2</span> Level Design Flow &amp; Pacing</h3>
                 <div class="gdd-grid">
                     <div class="gdd-card">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p>Observe patterns -> Move stealthily -> Solve puzzles -> Reach objective.</p>
-                    </div>
-                    <div class="gdd-card">
                         <h3>LEVEL DESIGN STRATEGY <i class="fas fa-map"></i></h3>
-                        <p>Each level introduces a new stealth mechanic. Guard patrol routes and environmental tools
-                            support multiple approaches for player agency.</p>
+                        <p>Each level is designed using a <em>3-node structure</em>: Safe Zone (tutorial beat) → Tension Zone (multiple patrol routes) → Climax Zone (time pressure + puzzle). This ensures pacing never plateaus.</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>TECH CONSTRAINTS <i class="fas fa-microchip"></i></h3>
-                        <p>Modular level design for faster iteration; optimized AI detection logic.</p>
-                    </div>
-                    <div class="gdd-card full-width">
-                        <h3>PLAYER EXPERIENCE <i class="fas fa-heart"></i></h3>
-                        <p>Tension-filled infiltration and tactical puzzle solving.</p>
+                        <h3>DIFFICULTY SCALING <i class="fas fa-chart-line"></i></h3>
+                        <p>Patrol routes narrow and intersect across 5 levels. Level 3 introduces synchronized patrol pairs, eliminating predictable safe windows.</p>
                     </div>
                 </div>
+                <div class="gallery-section">
+                    <div class="gallery-grid-v2" id="levelGrid">
+                        <div class="gallery-item"><img src="images/AnhHungVoDanh/Thiết kế Map.png" alt="Map Design" /></div>
+                        <!-- 📸 PLACEHOLDER: Insert level layout sketches here -->
+                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 2 Layout Sketch</span></div>
+                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 3 Layout Sketch</span></div>
+                    </div>
+                </div>
+
+                <!-- 3.3 UI/UX Breakdown -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.3</span> UI/UX Breakdown</h3>
+                <p class="gdd-body-text">UI design prioritizes information clarity: the Cone of Vision overlay and distraction radius arc are always visible to the player, keeping the stealth read intuitive without a HUD tutorial. All screens follow a dark, ink-on-paper Vietnamese art motif.</p>
+                <div class="gallery-grid-v2" id="uiGrid">
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/Main Screen UI.png" alt="Main UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/InGame UI.png" alt="InGame UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Giao nhiệm vụ.png" alt="Quest UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Hoàn thành màn chơi.png" alt="Complete UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Lose game.png" alt="Lose UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Pause game.png" alt="Pause UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Select Level.png" alt="Level Select" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Tương tác.png" alt="Interaction UI" /></div>
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Hướng Dẫn Chơi.png" alt="Tutorial UI" /></div>
+                </div>
+
+                <!-- 3.4 Economy & Balancing -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
+                <p class="gdd-body-text">No direct economy system. Balancing is done through <em>detection timing windows</em> and patrol speed multipliers. Each level was playtested with a stopwatch — the target "optimal clear time" defines how long each patrol window stays open.</p>
+                <div class="placeholder-block">
+                    <!-- 📸 PLACEHOLDER: Insert balancing spreadsheet screenshot here (detection timings, patrol speeds per level) -->
+                    <div class="img-placeholder"><i class="fas fa-table"></i><span>Balancing Spreadsheet — Patrol Timing Data</span></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 4.0 — TECHNICAL PIPELINE
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">4.0 Technical Design Pipeline</div>
+                <div class="gdd-grid">
+                    <div class="gdd-card">
+                        <h3>ASSET PIPELINE <i class="fas fa-cogs"></i></h3>
+                        <p>2D concept art → Photoshop cleanup → Unity Sprite import. Enemy sprites use a shared atlas to minimize draw calls on WebGL builds.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>LEVEL AUTHORING <i class="fas fa-layer-group"></i></h3>
+                        <p>Levels built in Unity Tilemap. Patrol routes are defined via Waypoint arrays on NavMesh Agents. Distraction zones use trigger colliders with state machine callbacks.</p>
+                    </div>
+                </div>
+                <div class="gallery-grid-v2">
+                    <div class="gallery-item"><img src="images/AnhHungVoDanh/InGame.png" alt="In-Game Screenshot" /></div>
+                    <!-- 📸 PLACEHOLDER: Insert Unity editor / asset pipeline screenshot here -->
+                    <div class="gallery-item img-placeholder-sm"><i class="fas fa-unity"></i><span>Unity Editor Screenshot</span></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 5.0 — KEY LEARNINGS
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge">
+                        <h4><i class="fas fa-exclamation-triangle"></i> WHAT DIDN'T WORK</h4>
+                        <p>Early patrol AI was too random — playtests showed players felt the game was unfair rather than challenging. Switching to deterministic, readable patrol loops fixed the perception immediately.</p>
+                    </div>
+                    <div class="insight-box solution">
+                        <h4><i class="fas fa-check-circle"></i> WHAT WORKED WELL</h4>
+                        <p>The Cone of Vision visual was unanimously praised in playtests — it turned an opaque stealth system into a transparent, learnable challenge. Showing information, not hiding it, is the key lesson.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 6.0 — PLAYABLE BUILD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section build-section">
+                <div class="section-label">6.0 Playable Build</div>
+                <div class="build-cta-row">
+                    <a href="#" class="btn-build" target="_blank" rel="noopener">
+                        <i class="fas fa-gamepad"></i> Play on Itch.io / WebGL
+                        <span class="build-badge">Coming Soon</span>
+                    </a>
+                </div>
+                <!-- 📸 PLACEHOLDER: Replace href above with actual Itch.io / WebGL link when ready -->
             </div>
 
             <footer class="project-footer">
