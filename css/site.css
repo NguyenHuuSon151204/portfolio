@@ -3086,8 +3086,9 @@ footer,
 }
 
 /* Row Pattern: 2, 2, 2, and then specialized last row for portrait */
-.activities-gallery-grid figure:nth-child(n+7) {
-    grid-column: 1 / -1; /* Full width row starting from item 7 */
+/* Ensure items 7+ only take full width when visible */
+.activities-gallery-grid.is-expanded figure:nth-child(n+7) {
+    grid-column: 1 / -1;
     background: transparent;
     border: none;
     box-shadow: none;
@@ -3103,24 +3104,26 @@ footer,
     transition: transform 0.3s ease;
 }
 
-.activities-extra-item {
-    display: none;
+/* Hidden items by default */
+.activities-gallery-grid .activities-extra-item {
+    display: none !important;
 }
 
+/* Shown when expanded */
 .activities-gallery-grid.is-expanded .activities-extra-item {
-    display: block;
+    display: block !important;
 }
 
-/* Portrait specific styling for the final item when expanded */
+/* Portrait specific styling (Only when expanded) */
 .activities-gallery-grid.is-expanded .portrait-extra {
-    display: flex !important; /* Ensure it stays flex when expanded */
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     grid-column: 1 / -1;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .activities-gallery-grid .portrait-extra img {
