@@ -201,6 +201,22 @@
     }
     window.toggleActivities = toggleActivities;
 
+    function toggleActivitiesV2() {
+        const items = d.querySelectorAll('.activities-extra-item');
+        const btn = d.getElementById('activitiesToggleBtn');
+        if (!items.length || !btn) return;
+        
+        const isHidden = items[0].style.display === 'none';
+        items.forEach(item => {
+            item.style.display = isHidden ? 'block' : 'none';
+        });
+        
+        btn.innerHTML = isHidden
+            ? 'Show Less <i class="fas fa-chevron-up"></i>'
+            : 'View All Photos <i class="fas fa-chevron-down"></i>';
+    }
+    window.toggleActivitiesV2 = toggleActivitiesV2;
+
     function initModalBindings() {
         if (!modal) return;
         modal.addEventListener('mousedown', (e) => { if (e.target === modal) closeProduct(); });
