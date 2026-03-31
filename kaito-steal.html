@@ -59,12 +59,8 @@
                 <div class="section-label">2.0 The Concept</div>
                 <div class="designer-insights">
                     <div class="insight-box challenge">
-                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
-                        <p>The concept emerged from a Game Jam prompt: <em>"Control something you can stretch."</em> Instead of a character moving through space, the player controls an extending arm — shifting the spatial interaction model entirely to a <em>tool-based</em> paradigm.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
-                        <p>Kaito is a master thief who lost his body but kept his arm. Players must navigate museum exhibits, steal artifacts, and avoid robotic guards — all without ever stepping foot in the room.</p>
+                        <h4><i class="fas fa-hand-pointer"></i> THE CORE HOOK</h4>
+                        <p><strong>Tool-Based Infiltration:</strong> Kaito Steal subverts traditional stealth mechanics. Instead of moving a vulnerable character through a hostile environment, players are stationary and must operate a highly flexible, extendable arm to steal artifacts. The design challenge was to shift the player’s mindset from direct spatial navigation to indirect, tool-based trajectory planning.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -88,17 +84,8 @@
                 <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
                 <div class="gdd-grid">
                     <div class="gdd-card full-width">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p><strong>Observe → Drag arm → Thread gaps → Grab artifact → Retract to safety.</strong><br>
-                        The arm is controlled via click-and-drag. Its trajectory is governed by IK (Inverse Kinematics) — it follows joints around corners. Guards patrol with a fixed Cone of Vision. Players must time their reach to the 1-2s blind spots in patrol cycles.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>KEY MECHANIC <i class="fas fa-cogs"></i></h3>
-                        <p>Stretching hand physics with joint-based IK. Time-windowed stealth: the arm must be fully retracted before the guard turns back.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>FAIL STATE <i class="fas fa-skull"></i></h3>
-                        <p><em>Hard-fail with instant reload.</em> If the arm is spotted, the level resets immediately — no death animation, no penalty timer. This encourages fast iteration and skill expression over frustration.</p>
+                        <h3>TRAJECTORY &amp; TIMING <i class="fas fa-drafting-compass"></i></h3>
+                        <p>The core loop is built around precision and prediction. Players must calculate distance, pathing, and extension speed. The arm acts as a physical entity in the world; if any part of it intersects with an enemy's line of sight, the alarm triggers. This transforms the stealth genre into a geometric puzzle where positioning is just as critical as timing.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -109,13 +96,9 @@
                 <!-- 3.2 Level Design -->
                 <h3 class="gdd-sub-title"><span class="sub-num">3.2</span> Level Design Flow &amp; Pacing</h3>
                 <div class="gdd-grid">
-                    <div class="gdd-card">
-                        <h3>PROGRESSION STRUCTURE <i class="fas fa-map"></i></h3>
-                        <p>4 levels, each introducing one new mechanic: Level 1 (drag basics) → Level 2 (corner threading) → Level 3 (moving guards) → Level 4 (dual guards + timed traps).</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>SAFE ZONE TEACHING <i class="fas fa-graduation-cap"></i></h3>
-                        <p>The first half of each level is a "safe practice zone" with no guards. This lets players discover the new mechanic before being tested on it.</p>
+                    <div class="gdd-card full-width">
+                        <h3>ESCALATING COMPLEXITY (20+ LEVELS) <i class="fas fa-signal"></i></h3>
+                        <p>The game's progression is structured to teach without tutorials. <strong>Early levels</strong> introduce the arm's basic bending constraints. <strong>Mid-levels</strong> introduce static hazards and narrow corridors, forcing players to master spatial geometry. <strong>Late-game levels</strong> introduce dynamic traps (moving lasers, rotating saws) combined with patrolling guards, escalating the mechanical requirement from slow planning to reflex-based execution.</p>
                     </div>
                 </div>
                 <div class="gallery-section">
@@ -177,13 +160,9 @@
             <div class="gdd-section">
                 <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
                 <div class="designer-insights">
-                    <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> WHAT DIDN'T WORK</h4>
-                        <p>Early IK drag felt "floaty" and unresponsive — playtests showed players losing trust in the control scheme. Adding a subtle arm-snap animation on contact made the mechanic feel deliberate and satisfying.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-check-circle"></i> WHAT WORKED WELL</h4>
-                        <p>The hard-fail instant-reload was a game design risk that paid off — playtesters averaged 4 attempts per level and described the satisfaction as "like solving a puzzle." Zero frustration reported in sessions.</p>
+                    <div class="insight-box solution full-width">
+                        <h4><i class="fas fa-undo-alt"></i> FRICTIONLESS FAILURE &amp; SKILL EXPRESSION</h4>
+                        <p>The most critical decision was regarding the **"Fail State."** Because manipulating the arm requires high precision, failure is frequent. To prevent player churn, I implemented a <strong>frictionless, instant-reload</strong> upon detection. By removing the punishment of load times, the game encourages a "Trial and Error" loop, allowing players to experiment with bold, creative trajectories without fear.</p>
                     </div>
                 </div>
             </div>

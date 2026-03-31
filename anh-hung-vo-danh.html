@@ -63,12 +63,12 @@
                 <div class="section-label">2.0 The Concept</div>
                 <div class="designer-insights">
                     <div class="insight-box challenge">
-                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
-                        <p>Inspired by historical Vietnamese resistance fighters of the 20th century, the game places players in the role of an anonymous hero operating behind enemy lines. The core fantasy is <em>"invisible power"</em> — eliminating threats without ever being seen.</p>
+                        <h4><i class="fas fa-eye-slash"></i> THE CORE FANTASY</h4>
+                        <p><strong>"Invisible Power":</strong> Inspired by historical Vietnamese resistance fighters, the game strips away direct combat in favor of tactical infiltration. The core player fantasy is built around striking from the shadows—the thrill of outsmarting superior enemy forces by manipulating their environment and reading their behavior.</p>
                     </div>
                     <div class="insight-box solution">
-                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
-                        <p>Set across 5 regions of Vietnam, each level introduces a unique hero character archetype tied to that region's history — creating emotional investment alongside mechanical progression.</p>
+                        <h4><i class="fas fa-map-marker-alt"></i> REGIONAL DEPTH</h4>
+                        <p>We designed distinct hero archetypes tied to 5 different regions of Vietnam to intertwine narrative stakes with mechanical progression, ensuring each level feels rooted in a specific historical and geographical context.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -92,17 +92,16 @@
                 <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
                 <div class="gdd-grid">
                     <div class="gdd-card full-width">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p><strong>Observe → Plan → Execute → Escape (or Neutralize).</strong><br>
-                        Players scan the environment using a visible <em>Cone of Vision</em> indicator on enemies, plan a timed approach using environmental distractions, execute the infiltration, and either escape or neutralize the target. Failure triggers instant-replay at the last checkpoint, encouraging experimentation.</p>
+                        <h3>SYSTEM-DRIVEN STEALTH <i class="fas fa-brain"></i></h3>
+                        <p>The core loop revolves around the <strong>Observe → Plan → Execute</strong> sequence. To make the stealth mechanics readable and fair, I implemented a visible <em>Cone of Vision</em> system. This shifts the gameplay from frustrating guesswork to a calculated, deterministic puzzle.</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>PLAYER LOOP <i class="fas fa-user"></i></h3>
-                        <p>Distraction item → Enemy enters "Investigate" state (3s window) → Player moves → Collect objective → Exfiltrate.</p>
+                        <h3>STATE MACHINE AI <i class="fas fa-robot"></i></h3>
+                        <p>The Enemy AI operates on a strict state machine: <strong>Patrol → Investigate → Chase → Combat</strong>. This predictability allows players to master the systems and feel empowered by their tactical choices.</p>
                     </div>
                     <div class="gdd-card">
-                        <h3>ENEMY AI STATES <i class="fas fa-eye"></i></h3>
-                        <p><strong>Patrol → Alert → Investigate → Chase → Combat.</strong> Detection radius scales per level to increase difficulty curve.</p>
+                        <h3>MECHANICAL WINDOWS <i class="fas fa-stopwatch"></i></h3>
+                        <p>By introducing <em>"Distraction items,"</em> players can artificially force the AI into the Investigate state, creating a precise 3-second window to execute a takedown or slip past choke points.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -161,13 +160,17 @@
             <div class="gdd-section">
                 <div class="section-label">4.0 Technical Design Pipeline</div>
                 <div class="gdd-grid">
-                    <div class="gdd-card">
-                        <h3>ASSET PIPELINE <i class="fas fa-cogs"></i></h3>
-                        <p>2D concept art → Photoshop cleanup → Unity Sprite import. Enemy sprites use a shared atlas to minimize draw calls on WebGL builds.</p>
+                    <div class="gdd-card full-width">
+                        <h3>OPTIMIZATION &amp; ANIMATION <i class="fas fa-running"></i></h3>
+                        <p>Bridging the gap between Art and Tech, I established a streamlined pipeline for 2D assets. Initial character concepts were designed with modularity in mind—illustrating characters with separate limbs enabled flexible pose manipulation and efficient <strong>skeletal animation</strong> directly within Unity, significantly optimizing WebGL performance.</p>
                     </div>
                     <div class="gdd-card">
                         <h3>LEVEL AUTHORING <i class="fas fa-layer-group"></i></h3>
-                        <p>Levels built in Unity Tilemap. Patrol routes are defined via Waypoint arrays on NavMesh Agents. Distraction zones use trigger colliders with state machine callbacks.</p>
+                        <p>Levels built in Unity Tilemap. Patrol routes are defined via Waypoint arrays on NavMesh Agents, ensuring precise movement control for a stealth-centric experience.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>MODULAR ASSETS <i class="fas fa-puzzle-piece"></i></h3>
+                        <p>Enemy sprites use a shared atlas and modular limbs to minimize draw calls and memory footprint on WebGL builds while maintaining fluid animations.</p>
                     </div>
                 </div>
                 <div class="gallery-grid-v2">
@@ -184,12 +187,12 @@
                 <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
                 <div class="designer-insights">
                     <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> WHAT DIDN'T WORK</h4>
-                        <p>Early patrol AI was too random — playtests showed players felt the game was unfair rather than challenging. Switching to deterministic, readable patrol loops fixed the perception immediately.</p>
+                        <h4><i class="fas fa-skull-crossbones"></i> THE "RANDOM AI" TRAP</h4>
+                        <p><strong>What Didn't Work:</strong> In early prototypes, enemy patrol routes included randomized variables. Playtesting revealed this broke the player's ability to plan; players felt punished by RNG rather than their own mistakes.</p>
                     </div>
                     <div class="insight-box solution">
-                        <h4><i class="fas fa-check-circle"></i> WHAT WORKED WELL</h4>
-                        <p>The Cone of Vision visual was unanimously praised in playtests — it turned an opaque stealth system into a transparent, learnable challenge. Showing information, not hiding it, is the key lesson.</p>
+                        <h4><i class="fas fa-check-circle"></i> DETERMINISTIC READABILITY</h4>
+                        <p><strong>What Worked:</strong> I pivoted to strictly deterministic, looping patrol routes. Combined with the visible Cone of Vision, this turned the game into a learnable puzzle. Key takeaway: In stealth, providing clear systems empowers players to take calculated risks.</p>
                     </div>
                 </div>
             </div>

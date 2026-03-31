@@ -59,12 +59,8 @@
                 <div class="section-label">2.0 The Concept</div>
                 <div class="designer-insights">
                     <div class="insight-box challenge">
-                        <h4><i class="fas fa-lightbulb"></i> INITIAL IDEA</h4>
-                        <p>Inspired by <em>Overcooked</em> but localized for Vietnam's street food culture. The player runs a bánh mì stall and must master a 5-step preparation chain under increasing time pressure — with customers losing patience dynamically.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-book"></i> NARRATIVE CONTEXT</h4>
-                        <p>No story narrative — the "narrative" is the <em>kinetic satisfaction</em> of the kitchen flow. Each level tells a story through its layout: a cramped family stall vs. a rush-hour tourist spot vs. a catering event.</p>
+                        <h4><i class="fas fa-utensils"></i> CULINARY CHAOS</h4>
+                        <p><strong>Cultural Integration:</strong> Inspired by the frantic energy of <em>Overcooked!</em>, Bánh Mì Xin Chào brings Vietnamese street food culture to the management simulation genre. The goal was to capture the authentic, high-pressure environment of a street vendor, translating the real-world chaos of handling multiple complex orders into a highly engaging, time-management game loop.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -88,17 +84,8 @@
                 <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> Core Loop &amp; System Design</h3>
                 <div class="gdd-grid">
                     <div class="gdd-card full-width">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p><strong>Receive order → Prepare ingredients → Assemble bánh mì → Serve → Collect tip → Upgrade station.</strong><br>
-                        Each order has a patience timer (5–12s depending on level). Serving within the green zone yields a bonus tip. Upgrades (faster slicing, bigger bread) are purchased between levels using earned coins — creating a meta-loop that drives retention.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>SESSION STRUCTURE <i class="fas fa-clock"></i></h3>
-                        <p>Each level = 1 wave (2–3 minutes). 3 stars for speed + satisfaction score. Designed for mobile: no level lasts longer than 4 minutes to fit commute habits.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>RETENTION MECHANICS <i class="fas fa-redo"></i></h3>
-                        <p>Daily login reward → Daily mission → Rewarded Ad at fail state ("Continue for free!") → Weekly event level. All standard mobile LiveOps hooks implemented in prototype.</p>
+                        <h3>RESOURCE MANAGEMENT &amp; COGNITIVE LOAD <i class="fas fa-brain"></i></h3>
+                        <p>The core gameplay revolves around the <strong>Order → Prep → Serve</strong> cycle. The system is designed to test the player's multitasking bandwidth. Each customer has a visible 'Patience Bar' that acts as a strict timer. As orders become more complex, the player's cognitive load increases, forcing them to make rapid trade-off decisions on which orders to prioritize and which to sacrifice.</p>
                     </div>
                 </div>
                 <div class="placeholder-block">
@@ -109,13 +96,9 @@
                 <!-- 3.2 Level Design -->
                 <h3 class="gdd-sub-title"><span class="sub-num">3.2</span> Level Design Flow &amp; Pacing</h3>
                 <div class="gdd-grid">
-                    <div class="gdd-card">
-                        <h3>U-SHAPED KITCHEN LAYOUT <i class="fas fa-map"></i></h3>
-                        <p>All stations arranged in a U-shape so the player's thumb never travels more than 60% of screen height. This reduces cognitive load and enables rapid multi-station chaining.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>CHAOS ESCALATION <i class="fas fa-fire"></i></h3>
-                        <p>Order spawn rate dynamically scales with player score: performing well = more orders = more chaos. This creates organic difficulty without hard gates.</p>
+                    <div class="gdd-card full-width">
+                        <h3>THE "U-SHAPED" KITCHEN FLOW <i class="fas fa-tools"></i></h3>
+                        <p>Across the 10+ levels, spatial layout is my primary tool for difficulty balancing. The optimal kitchen design features a <strong>U-shaped layout</strong>, allowing for smooth action chains if the player establishes a rhythm (The Flow State). However, in later levels, I intentionally disrupted this layout—separating ingredients from cooking stations—to physically increase travel time and break the player's established rhythm.</p>
                     </div>
                 </div>
                 <div class="gallery-section">
@@ -143,8 +126,13 @@
                 </div>
 
                 <!-- 3.4 Economy -->
-                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
-                <p class="gdd-body-text">Dual currency: <strong>Coins</strong> (earned in-game, used for station upgrades) and <strong>Gems</strong> (premium, used for cosmetics and continues). Upgrade costs are tuned so the player can upgrade one station per 2–3 completed levels — maintaining a sense of meaningful progression.</p>
+                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Monetization &amp; Economy</h3>
+                <div class="gdd-grid">
+                    <div class="gdd-card full-width">
+                        <h3>MONETIZATION WITHOUT INTERRUPTION <i class="fas fa-ad"></i></h3>
+                        <p>A key responsibility was integrating ads without breaking player immersion. Instead of forced interstitials, I tied monetization directly to the game's difficulty spikes. When a player fails a level due to time running out (**The Chaos Moment**), a Rewarded Ad is offered to extend the timer. This places the ad at the exact moment of highest player investment, turning a monetization tactic into a perceived "lifeline."</p>
+                    </div>
+                </div>
                 <div class="gallery-section">
                     <div class="gallery-grid-v2">
                         <div class="gallery-item"><img src="images/BanhMiXinChao/Asset/Bánh Mì 3D.png" alt="3D Model" /></div>

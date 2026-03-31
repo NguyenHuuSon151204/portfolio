@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cut Balance · NHSSON Portfolio</title>
+    <title>Cut Balance · Case Study · NHSSON</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script defer src="js/site.js"></script>
@@ -13,43 +13,36 @@
 <body class="dark">
     <section class="project-detail">
         <div class="container container--narrow">
+
+            <nav class="detail-breadcrumb">
+                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            </nav>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 1.0 — OVERVIEW & SCOPE
+            ════════════════════════════════════════ -->
             <header class="project-head">
-                <h1 class="project-title">Cut Balance <span>●</span></h1>
-                <ul class="taglist">
-                    <li>Puzzle</li>
-                    <li>Physics</li>
-                    <li>Mobile</li>
-                </ul>
-                <p class="project-desc">A physics-based puzzle game where players cut structural parts while maintaining
-                    stability.</p>
+                <div class="project-title-row">
+                    <h1 class="project-title">Cut Balance <span>●</span></h1>
+                    <ul class="taglist">
+                        <li>Puzzle</li>
+                        <li>Physics</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                <p class="project-desc">A minimalist physics-based puzzle game where structural integrity is tested with every single cut.</p>
+
+                <div class="section-label">1.0 Overview &amp; Scope</div>
                 <div class="project-meta-grid">
                     <div><strong>Genre:</strong> Physics Puzzle</div>
-                    <div><strong>Platform:</strong> Mobile</div>
-                    <div><strong>Year:</strong> 2024</div>
-                    <div><strong>Role:</strong> Solo Developer</div>
-                    <div><strong>Team Size:</strong> Solo Developer</div>
-                    <div><strong>Tools:</strong> Unity (C#)</div>
-                </div>
-
-                <div class="usp-banner">
-                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
-                    <p>High-stakes risk-reward mechanics; focuses on weight distribution understanding; 'one wrong cut'
-                        failure state.</p>
-                </div>
-
-                <div class="designer-insights">
-                    <div class="insight-box challenge">
-                        <h4><i class="fas fa-exclamation-triangle"></i> CHALLENGE</h4>
-                        <p>Maintaining a stable frame rate while computing real-time physics simulation for multiple
-                            structural pieces.</p>
-                    </div>
-                    <div class="insight-box solution">
-                        <h4><i class="fas fa-lightbulb"></i> SOLUTION</h4>
-                        <p>Limited object count per level and optimized physics collision matrices.</p>
-                    </div>
+                    <div><strong>Platform:</strong> Mobile (Android/iOS)</div>
+                    <div><strong>Status:</strong> Released / Prototype</div>
+                    <div><strong>Role:</strong> Lead Designer · Solo Dev</div>
+                    <div><strong>Tools:</strong> Unity (C#) · Canva</div>
                 </div>
             </header>
 
+            <!-- VIDEO -->
             <div class="media-showcase-v2 vertical-mode">
                 <div class="cinema-box">
                     <iframe src="https://www.youtube.com/embed/kH311AD2Bks"
@@ -58,25 +51,56 @@
                 </div>
             </div>
 
-            <div class="blueprint-section">
-                <h2 class="section-title">Game Design Breakdown <span>●</span></h2>
+            <!-- ══════════════════════════════════════
+                 SECTION 2.0 — THE CONCEPT
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">2.0 The Concept</div>
+                <div class="designer-insights">
+                    <div class="insight-box challenge full-width">
+                        <h4><i class="fas fa-weight-hanging"></i> THE PHYSICS OF CONSEQUENCE</h4>
+                        <p>Cut Balance is a minimalist puzzle game that strips interaction down to a single verb: <strong>Cut.</strong> The core philosophy is <em>"Think before you act."</em> By removing physical supports from stacked objects, players must intuitively understand gravity, friction, and weight distribution to prevent the structure from collapsing. Every action has an immediate, simulated consequence.</p>
+                    </div>
+                </div>
+                <div class="usp-banner">
+                    <h3><i class="fas fa-star"></i> UNIQUE SELLING POINTS</h3>
+                    <p>Minimalist 'Single Verb' interaction; high-stakes tension; purely systemic gameplay where emergence creates the challenge.</p>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 3.0 — GDD
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">3.0 Game Design Document (GDD)</div>
+
+                <!-- 3.1 System Design -->
+                <h3 class="gdd-sub-title"><span class="sub-num">3.1</span> System Design &amp; UX</h3>
                 <div class="gdd-grid">
-                    <div class="gdd-card">
-                        <h3>CORE LOOP <i class="fas fa-sync-alt"></i></h3>
-                        <p>Observe -> Cut block -> Stability check -> Maintain balance -> Complete.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>LEVEL DESIGN STRATEGY <i class="fas fa-map"></i></h3>
-                        <p>Progression from basic balance to multi-step planning with unstable materials and complex
-                            structures.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>TECH CONSTRAINTS <i class="fas fa-microchip"></i></h3>
-                        <p>Physics performance optimization; low object-count per level for high FPS.</p>
-                    </div>
                     <div class="gdd-card full-width">
-                        <h3>PLAYER EXPERIENCE <i class="fas fa-heart"></i></h3>
-                        <p>Methodical observation and the 'hold your breath' tension of stability checks.</p>
+                        <h3>ONE-ACTION CONSEQUENCE <i class="fas fa-project-diagram"></i></h3>
+                        <p>The game is heavily system-driven. Every cut creates a ripple effect across the entire physics system. To support the learning curve, the game relies on <strong>instant visual feedback</strong>. When a structure falls, players immediately see the physical chain reaction that caused the failure. This design encourages observational learning—teaching players that sometimes, waiting for momentum to settle is the smartest move.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>SYSTEMIC FEEDBACK <i class="fas fa-eye"></i></h3>
+                        <p>The UI is non-existent during gameplay to maximize focus on the physical structure. Visual cues like object wobbling and slight color shifts indicate stress points before failure.</p>
+                    </div>
+                    <div class="gdd-card">
+                        <h3>UX OF FAILURE <i class="fas fa-redo-alt"></i></h3>
+                        <p>Similar to my other projects, failure is instant and frictionless. A single tap resets the structure, keeping the "Think → Cut → Fail → Learn" loop extremely tight.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════
+                 SECTION 5.0 — KEY LEARNINGS
+            ════════════════════════════════════════ -->
+            <div class="gdd-section">
+                <div class="section-label">5.0 Key Learnings &amp; Post-Mortem</div>
+                <div class="designer-insights">
+                    <div class="insight-box solution full-width">
+                        <h4><i class="fas fa-lightbulb"></i> SYSTEMIC READABILITY</h4>
+                        <p>This project taught me that complexity doesn't require many features. By refining a single mechanic (cutting) and making the physics results perfectly readable, I could create 50+ levels of varying difficulty without introducing new code. Depth emerges from system interaction, not feature creep.</p>
                     </div>
                 </div>
             </div>
