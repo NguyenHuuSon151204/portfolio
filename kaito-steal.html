@@ -64,8 +64,7 @@
                     </div>
                 </div>
                 <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert initial concept sketch / reference images here -->
-                    <div class="img-placeholder"><i class="fas fa-image"></i><span>Concept Sketch — Arm Mechanic Ideation</span></div>
+                    <img src="images/Kaito Steal/Kaito Steal.png" alt="Kaito Steal Concept" />
                 </div>
 
                 <div class="usp-banner">
@@ -104,55 +103,16 @@
                 <div class="gallery-section">
                     <div class="gallery-grid-v2">
                         <div class="gallery-item"><img src="images/Kaito Steal/Nền 1.png" alt="Level 1" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 2.png" alt="Level 2" /></div>
-                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 3.png" alt="Level 3" /></div>
-                        <!-- 📸 PLACEHOLDER: Insert level layout sketches here -->
-                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 4 Layout Sketch</span></div>
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 5.png" alt="Level 5" /></div>
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 6.png" alt="Level 6" /></div>
+                        <div class="gallery-item"><img src="images/Kaito Steal/Nền 7.png" alt="Level 7" /></div>
                     </div>
                 </div>
 
-                <!-- 3.3 UI/UX -->
-                <h3 class="gdd-sub-title"><span class="sub-num">3.3</span> UI/UX Breakdown</h3>
-                <p class="gdd-body-text">UI is minimalist by design — a heist aesthetic with dark overlays and neon highlights. The focus is on the arm itself as the primary UI element: its color changes (white → red) signals detection state. No separate health bar needed.</p>
-                <div class="gallery-grid-v2" id="uiGrid">
-                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 3.png" alt="UI" /></div>
-                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 4.png" alt="UI" /></div>
-                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 5.png" alt="UI" /></div>
-                    <div class="gallery-item"><img src="images/Kaito Steal/In Game UI 6.png" alt="UI" /></div>
-                    <div class="gallery-item"><img src="images/Kaito Steal/Game Asset 1.png" alt="Asset" /></div>
-                    <!-- 📸 PLACEHOLDER: Insert wireframes / UI flow diagram here -->
-                    <div class="gallery-item img-placeholder-sm"><i class="fas fa-pencil-ruler"></i><span>UI Flow Wireframe</span></div>
-                </div>
-
-                <!-- 3.4 Economy -->
-                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
-                <p class="gdd-body-text">No economy system. Balancing is focused entirely on <em>timing windows</em>: guard patrol speed, arm drag speed, and IK response time must form a triangle where the optimal window is 1.5–2.5s — tight enough to create tension but learnable in 2–3 attempts.</p>
-                <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert balancing spreadsheet (patrol speed vs. arm drag speed matrix) -->
-                    <div class="img-placeholder"><i class="fas fa-table"></i><span>Timing Balance Spreadsheet</span></div>
-                </div>
-            </div>
 
             <!-- ══════════════════════════════════════
                  SECTION 4.0 — TECHNICAL PIPELINE
             ════════════════════════════════════════ -->
-            <div class="gdd-section">
-                <div class="section-label">4.0 Technical Design Pipeline</div>
-                <div class="gdd-grid">
-                    <div class="gdd-card">
-                        <h3>IK OPTIMIZATION <i class="fas fa-code"></i></h3>
-                        <p>Unity's built-in IK was replaced with a custom 2-joint chain solver to reduce WebGL CPU overhead from ~8ms to ~2ms per frame. This was critical for smooth 60fps browser play.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>ASSET OPTIMIZATION <i class="fas fa-compress-alt"></i></h3>
-                        <p>All sprites compressed to 512×512 max with Crunch compression. WebGL build size reduced from 48MB to 22MB. Audio compressed to OGG at 96kbps.</p>
-                    </div>
-                </div>
-                <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert Unity Profiler screenshot / WebGL build settings screenshot -->
-                    <div class="img-placeholder"><i class="fas fa-chart-bar"></i><span>Unity Profiler — WebGL Performance</span></div>
-                </div>
-            </div>
 
             <!-- ══════════════════════════════════════
                  SECTION 5.0 — KEY LEARNINGS

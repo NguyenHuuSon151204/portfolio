@@ -72,8 +72,7 @@
                     </div>
                 </div>
                 <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert initial concept sketch / mood board image here -->
-                    <div class="img-placeholder"><i class="fas fa-image"></i><span>Concept Sketch / Mood Board</span></div>
+                    <img src="images/AnhHungVoDanh/Anh Hùng Vô Danh.png" alt="Anh Hùng Vô Danh Concept" />
                 </div>
 
                 <div class="usp-banner">
@@ -105,8 +104,7 @@
                     </div>
                 </div>
                 <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert Core Loop flowchart diagram here -->
-                    <div class="img-placeholder"><i class="fas fa-project-diagram"></i><span>Core Loop Flowchart Diagram</span></div>
+                    <img src="images/AnhHungVoDanh/Core Loop AHVD.png" alt="Core Loop Visualization" />
                 </div>
 
                 <!-- 3.2 Level Design -->
@@ -124,9 +122,6 @@
                 <div class="gallery-section">
                     <div class="gallery-grid-v2" id="levelGrid">
                         <div class="gallery-item"><img src="images/AnhHungVoDanh/Thiết kế Map.png" alt="Map Design" /></div>
-                        <!-- 📸 PLACEHOLDER: Insert level layout sketches here -->
-                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 2 Layout Sketch</span></div>
-                        <div class="gallery-item img-placeholder-sm"><i class="fas fa-map-marked-alt"></i><span>Level 3 Layout Sketch</span></div>
                     </div>
                 </div>
 
@@ -145,40 +140,6 @@
                     <div class="gallery-item"><img src="images/AnhHungVoDanh/UI Hướng Dẫn Chơi.png" alt="Tutorial UI" /></div>
                 </div>
 
-                <!-- 3.4 Economy & Balancing -->
-                <h3 class="gdd-sub-title"><span class="sub-num">3.4</span> Economy &amp; Balancing</h3>
-                <p class="gdd-body-text">No direct economy system. Balancing is done through <em>detection timing windows</em> and patrol speed multipliers. Each level was playtested with a stopwatch — the target "optimal clear time" defines how long each patrol window stays open.</p>
-                <div class="placeholder-block">
-                    <!-- 📸 PLACEHOLDER: Insert balancing spreadsheet screenshot here (detection timings, patrol speeds per level) -->
-                    <div class="img-placeholder"><i class="fas fa-table"></i><span>Balancing Spreadsheet — Patrol Timing Data</span></div>
-                </div>
-            </div>
-
-            <!-- ══════════════════════════════════════
-                 SECTION 4.0 — TECHNICAL PIPELINE
-            ════════════════════════════════════════ -->
-            <div class="gdd-section">
-                <div class="section-label">4.0 Technical Design Pipeline</div>
-                <div class="gdd-grid">
-                    <div class="gdd-card full-width">
-                        <h3>OPTIMIZATION &amp; ANIMATION <i class="fas fa-running"></i></h3>
-                        <p>Bridging the gap between Art and Tech, I established a streamlined pipeline for 2D assets. Initial character concepts were designed with modularity in mind—illustrating characters with separate limbs enabled flexible pose manipulation and efficient <strong>skeletal animation</strong> directly within Unity, significantly optimizing WebGL performance.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>LEVEL AUTHORING <i class="fas fa-layer-group"></i></h3>
-                        <p>Levels built in Unity Tilemap. Patrol routes are defined via Waypoint arrays on NavMesh Agents, ensuring precise movement control for a stealth-centric experience.</p>
-                    </div>
-                    <div class="gdd-card">
-                        <h3>MODULAR ASSETS <i class="fas fa-puzzle-piece"></i></h3>
-                        <p>Enemy sprites use a shared atlas and modular limbs to minimize draw calls and memory footprint on WebGL builds while maintaining fluid animations.</p>
-                    </div>
-                </div>
-                <div class="gallery-grid-v2">
-                    <div class="gallery-item"><img src="images/AnhHungVoDanh/InGame.png" alt="In-Game Screenshot" /></div>
-                    <!-- 📸 PLACEHOLDER: Insert Unity editor / asset pipeline screenshot here -->
-                    <div class="gallery-item img-placeholder-sm"><i class="fas fa-unity"></i><span>Unity Editor Screenshot</span></div>
-                </div>
-            </div>
 
             <!-- ══════════════════════════════════════
                  SECTION 5.0 — KEY LEARNINGS
